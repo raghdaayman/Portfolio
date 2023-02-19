@@ -1,18 +1,11 @@
-// import meter1 from "../assets/img/meter1.svg";
-// import meter2 from "../assets/img/meter2.svg";
-// import meter3 from "../assets/img/meter3.svg";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import Progress from '../progress';
 import "./style.css";
-// import arrow1 from "../assets/img/arrow1.svg";
-// import arrow2 from "../assets/img/arrow2.svg";
-// import colorSharp from "../assets/img/color-sharp.png"
 
 export const Skills = () => {
   const responsive = {
     superLargeDesktop: {
-      // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
       items: 5
     },
@@ -38,30 +31,28 @@ export const Skills = () => {
                     <div className="skill-bx wow zoomIn">
                         <h2>Skills</h2>
                         <p>You Can See My Skills Here</p>
-                        <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
-                            <div className="item" lg={12} md={6} xl={5}>
-                                <Progress number={'50'}/>
-                                <h5>BackEnd Development</h5>
+                        <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider d-flex">
+                            <div className="item w-100 col-lg-4 col-sm-12">
+                              <Progress number={'50'}/>
+                              <h5>BackEnd Development</h5>
                             </div>
-                            <div className="item">
-                                <Progress number={'50'}/>
-                                <h5>Data Science</h5>
+                            <div className="item w-100 col-lg-4 col-sm-12">
+                                <Progress number={'80'}/>
+                                <h5>Quality Assurance</h5>
                             </div>
-                            <div className="item">
-                                <Progress number={'50'}/>
-                                <h5>FrontEnd Development</h5>
+                            <div className="item w-100 col-lg-4 col-sm-12">
+                                <Progress number={'0'}/>
+                             <h5>FrontEnd Development</h5>
                             </div>
-                            <div className="item">
-                            <Progress number={'50'}/>
-                                <h5>Cyber Security</h5>
+                            <div className="item w-100 col-lg-4 col-sm-12">
+                            <Progress number={'0'}/>
+                              <h5>Software Enginnering</h5>
                             </div>
                         </Carousel>
                     </div>
                 </div>
             </div>
         </div>
-        {/* <img className="background-image-left" src={colorSharp} alt="Image" /> */}
-        <img className="background-image-left" src={''} alt="Image" />
     </section>
   )
 }
